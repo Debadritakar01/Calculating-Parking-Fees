@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculating Parking Fees</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="container">
+        <h1>EasyPark Fee</h1>
+
+        <div class="form-group">
+            <label for="vehicleType">Vehicle Type:</label>
+            <select id="vehicleType">
+                <option value="car">Car</option>
+                <option value="bike">Bike</option>
+                <option value="truck">Truck</option>
+                <option value="bus">Bus</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="vehicleNumber">Vehicle Number:</label>
+            <input type="text" id="vehicleNumber">
+        </div>
+
+        <div class="form-group">
+            <label for="entryTime">Entry Time:</label>
+            <input type="text" id="entryTime" placeholder="HH:MM:SS">
+        </div>
+
+        <div class="form-group">
+            <label for="exitTime">Exit Time:</label>
+            <input type="text" id="exitTime" placeholder="HH:MM:SS">
+        </div>
+
+        <button onclick="calculateParkingFee()">Calculate Fee</button>
+
+        <h2>Parking Fee:</h2>
+        <p id="parkingFee"></p>
+
+        <h2>Parking History:</h2>
+        <table id="parkingHistory">
+            <thead>
+                <tr>
+                    <th>Vehicle Type</th>
+                    <th>Vehicle Number</th>
+                    <th>Entry Time</th>
+                    <th>Exit Time</th>
+                    <th>Parking Fee</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
